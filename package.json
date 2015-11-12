@@ -1,0 +1,26 @@
+{
+  "name": "entity-color-tool",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nodeunit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/any-code/entity-color-tool.git"
+  },
+  "keywords": ["entity-color-tool"],
+  "author": "Lee Tagg <lee@anycode.io>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/any-code/entity-color-tool/issues"
+  },
+  "homepage": "https://github.com/any-code/entity-color-tool#readme",
+  "devDependencies": {
+    "nodeunit": "^0.9.1"
+  }
+}
