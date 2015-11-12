@@ -16,7 +16,15 @@ npm install entity-color-tool
 
 ``` javascript
 
+var tool = require('entity-color-tool')
+
+tool.blendHexArray(100, "#FF0000", "#FFFF00")
+
 ```
+
+Blending colors "#FF0000" and "#FFFF00" over 100 increments returns the hex codes in an array
+
+    [ '#ffff00', '#fffc00', '#fff900', '#fff700', ..., '#ff0c00', '#ff0a00', '#ff0700', '#ff0500', '#FF0000']
 
 ## Copyright and license
 Copyright (c) 2015, Any Code <lee@anycode.io>
