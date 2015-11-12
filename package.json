@@ -1,7 +1,7 @@
 {
   "name": "entity-color-tool",
   "version": "0.1.1",
-  "description": "",
+  "description": "Blend hex colours and generate arrays of hex codes relating to the blend steps in a gradient",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -14,7 +14,12 @@
     "url": "git+https://github.com/any-code/entity-color-tool.git"
   },
   "keywords": [
-    "entity-color-tool"
+    "entity-color-tool",
+    "hex",
+    "color",
+    "colour",
+    "gradient",
+    "blend"
   ],
   "author": "Lee Tagg <lee@anycode.io>",
   "license": "ISC",
