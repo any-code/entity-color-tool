@@ -26,7 +26,9 @@ exports.testHexToRGBError = function(test) {
 
 exports.testHueHexArray = function(test) {
   test.deepEqual(testable.hueHexArray(3, "#FF0000", 30), ["#FF0000", "#FF2A00", "#FF5400"]);
-    test.deepEqual(testable.hueHexArray(3, "#FF0000", 360), ["#FF0000", "#00FF00", "#0000FF"]);
+  test.deepEqual(testable.hueHexArray(3, "#FF0000", 360), ["#FF0000", "#00FF00", "#0000FF"]);
+  test.deepEqual(testable.hueHexArray(3, "#641EAA", 360), ['#641EAA', '#AA641E', '#1EAA64']);
+  test.deepEqual(testable.hueHexArray(3, "#641EAA", 1080), ['#641EAA', '#641EAA', '#641EAA']);
   test.done();
 }
 

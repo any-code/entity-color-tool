@@ -103,9 +103,10 @@ function Module(exports) {
             dps = deg / size;
 
         for (var i = 1; i < size; i++ ) {
-            var rgb = hexToRGB(hex);
-            var hls = rgbToHLS(rgb);
-            hls[0] = hls[0] + (dps*i);
+            var rgb = hexToRGB(hex),
+                hls = rgbToHLS(rgb);
+
+            hls[0] = (hls[0] + (dps*i)) % 360;
             rgb = hlsToRGB(hls);
             steps.push(rgbToHex(rgb));
         }
