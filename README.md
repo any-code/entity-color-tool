@@ -26,6 +26,19 @@ Blending colors "#FF0000" and "#FFFF00" over 100 increments returns the hex code
 
     [ '#ffff00', '#fffc00', '#fff900', '#fff700', ..., '#ff0c00', '#ff0a00', '#ff0700', '#ff0500', '#FF0000']
 
+``` javascript
+
+var tool = require('entity-color-tool')
+
+tool.hueHexArray(3, "#FF0000", 360)
+
+```
+
+Shifting hue starting at "#FF0000" by the number of steps for up to specified degrees. Increments returned as hex codes in an array
+
+    [ '#FF0000', '#00FF00', '#0000FF' ]
+
+
 ## Copyright and license
 Copyright (c) 2015, [Anycode](https://anycode.io/ "Anycode") <lee@anycode.io>
 

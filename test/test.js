@@ -1,5 +1,13 @@
 var testable = require('../entity-color-tool.min.js');
 
+exports.testRGBToHLSAndBack = function(test) {
+  test.deepEqual(testable.hexToRGB('1EC81E'), [30, 200, 30]);
+  test.deepEqual(testable.rgbToHLS([30, 200, 30]), [120, 0.45098039215686275, 0.7391304347826086]);
+  test.deepEqual(testable.hlsToRGB([120, 0.45098039215686275, 0.7391304347826086]), [30, 200, 30]);
+  test.equals(testable.rgbToHex([30, 200, 30]), '#1EC81E');
+  test.done();
+}
+
 exports.testHexToRGB = function(test) {
   test.deepEqual(testable.hexToRGB('#FFF'), [255, 255, 255]);
   test.deepEqual(testable.hexToRGB('#000000'), [0, 0, 0]);
@@ -13,6 +21,12 @@ exports.testHexToRGBError = function(test) {
   test.deepEqual(testable.hexToRGB(112344, '#AAAAAA'), [170, 170, 170]);
   test.deepEqual(testable.hexToRGB(null), [0, 0, 0]);
   test.deepEqual(testable.hexToRGB('#FF'), [0, 0, 0]);
+  test.done();
+}
+
+exports.testHueHexArray = function(test) {
+  test.deepEqual(testable.hueHexArray(3, "#FF0000", 30), ["#FF0000", "#FF2A00", "#FF5400"]);
+    test.deepEqual(testable.hueHexArray(3, "#FF0000", 360), ["#FF0000", "#00FF00", "#0000FF"]);
   test.done();
 }
 
