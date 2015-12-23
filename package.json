@@ -7,7 +7,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "nodeunit"
+    "test": "nodeunit",
+    "pub-minify": "uglifyjs entity-color-tool.js --compress --screw-ie8 --mangle > entity-color-tool.min.js",
+    "pub-npm": "npm version patch && npm publish"
   },
   "repository": {
     "type": "git",

@@ -1,4 +1,4 @@
-var testable = require('../index');
+var testable = require('../entity-color-tool.min.js');
 
 exports.testHexToRGB = function(test) {
   test.deepEqual(testable.hexToRGB('#FFF'), [255, 255, 255]);
