@@ -87,12 +87,12 @@ function Module(exports) {
     }
 
 
-    function blendHexArray(size, hex1, hex2) {
-        var steps = [hex2];
+    function blendHexArray(size, hex1, hex2, preferFirst) {
+        var steps = [preferFirst?hex1:hex2];
         for (var i = 1; i < size -1; i++ ) {
-            steps.push(blendHex(hex1, hex2, (1 / size) * i));
+            steps.push(blendHex(preferFirst?hex2:hex1, preferFirst?hex1:hex2, (1 / size) * i));
         }
-        steps.push(hex1);
+        steps.push(preferFirst?hex2:hex1);
         return steps;
     }
 

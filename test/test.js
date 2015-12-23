@@ -28,8 +28,15 @@ exports.testSize = function(test) {
   test.done();
 }
 
+exports.testPreferFirstColor = function(test) {
+    test.deepEqual(testable.blendHexArray(1, '#FFF', '#000'), ['#000', '#FFF']);
+    test.deepEqual(testable.blendHexArray(1, '#FFF', '#000', true), ['#FFF', '#000']);
+    test.done();
+}
+
 exports.testScale = function(test) {
   test.deepEqual(testable.blendHexArray(3, '#FFF', '#000'), ['#000', '#555555', '#FFF']);
+  test.deepEqual(testable.blendHexArray(3, '#FFF', '#000', true), ['#FFF', '#aaaaaa', '#000']);
   test.deepEqual(testable.blendHexArray(5, '#FFF', '#000'), ['#000', '#333333', '#666666', '#999999', '#FFF']);
   test.done();
 }
