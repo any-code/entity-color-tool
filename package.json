@@ -1,6 +1,6 @@
 {
   "name": "entity-color-tool",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Blend hex colours and generate arrays of hex codes relating to the blend steps in a gradient",
   "main": "entity-color-tool.js",
   "directories": {
